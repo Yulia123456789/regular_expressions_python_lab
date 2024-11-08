@@ -9,3 +9,4 @@ for i in password:
         print(f'{i}: правильное выражение')
     else:
         print(f'{i}: неправильное выражение')
+
