@@ -5,6 +5,8 @@ str_1 = input()
 reg = r"abcdefghijklmnopqrstuv18340"
 
 if re.search(reg, str_1) != None:
-    print('Строка правильная')
+    print(f'Строка правильная {str_1}')
 else:
-    print('Строка неправильная')
+    print(f'Строка неправильная {str_1}')
+
+
