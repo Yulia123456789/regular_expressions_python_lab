@@ -1,6 +1,6 @@
 
 import re
-url = ['http://example.com', 'http://.example.com', 'Just Text', 'https://sub.example.com', 'http://example_.com', 'https://example.com', '//a.com', 'https://example.com#anchor', 'http://ex-.com']
+url = ['http://example.com', 'http://.example.com', 'Just Text', 'https://sub.example.com', 'http://example_.com', 'https://example.com', '//a.com', 'https://example.com#anchor', 'http://ex-.com', "https://www.example.com:8080/page?id=123#section"]
 pattern = re.compile(r'^(https?://)?(?:[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]\.)+[a-zA-Z]{2,}(?::\d+)?(/[^?#]*)?(\?[^#]*)?(#.*)?$')
 
 for i in url:
