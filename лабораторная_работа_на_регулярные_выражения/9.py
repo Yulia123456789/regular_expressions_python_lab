@@ -1,11 +1,11 @@
 import re
 
-password = input()
+password = ['C00l_Pass', 'SupperPas1', 'Cool_pass', 'C00l']
 
-reg = r"([a-z]+)([A-Z]+)([0-9]+)(_*)"
+reg = r"^(?=(.*[a-z]))(?=(.*[A-Z]))(?=(.*\d))[\w]{8,}$"
 
-
-if re.search(reg, password) and len(password) >= 8:
-    print('YES')
-else:
-    print('NO')
+for i in password:
+    if re.search(reg, i):
+        print(f'Надежный пароль {i}')
+    else:
+        print(f'Ненадежный пароль {i}')
