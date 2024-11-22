@@ -1,10 +1,11 @@
 import re
 
-email = input()
+email = ["test@example.com", "valid_123@example.co.uk", "another.invalid@domain,com", "bug@@@com.ru", "root@localhost", 'user@example.com', "Just Text2"]
 
-reg = r"[@]{1}\w+[.]{1}\w+"
+reg = r"(^([a-zA-Z0-9._%+-]+)@([a-zA-Z0-9.-]+(\.[a-zA-Z]{2,})?)$)"
 
-if re.search(reg, email):
-    print('y')
-else:
-    print('n')нет
+for i in email:
+    if re.search(reg, i):
+        print(f'Правильный email {i}')
+    else:
+        print(f'Неправильный email {i}')
