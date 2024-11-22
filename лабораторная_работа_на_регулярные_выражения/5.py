@@ -1,8 +1,10 @@
 import re
 
-hex_number = input()
-reg = r"^#[0-9A-F]{5}"
-if re.findall(reg, hex_number) and len(hex_number) == 7:
-    print('YES')
-else:
-    print('NO')
+hex_number = ['#FFFFFF', '#FF3421', '#00ff00', '232323', 'f#fddee', '#fd2']
+reg = r"^#[0-9A-Fa-f]{6}$"
+
+for i in hex_number:
+    if re.search(reg, i):
+        print(f'Правильный шестнадцатиричный идентификатор цвета {i}')
+    else:
+        print(f'Неправильный шестнадцатиричный идентификатор цвета {i}')
